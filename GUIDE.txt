@@ -1,0 +1,79 @@
+YAN — Portfolio Site Guide
+==========================
+
+WHAT'S IN THIS FOLDER
+---------------------
+  index.html       → Home (the box-opening hero + featured work + contact)
+  work.html        → All projects grid
+  about.html       → Your bio, skills, and "about me" video
+  project-1.html   → A project detail page (TEMPLATE — duplicate this for each project)
+  project-2.html   → A second project detail page
+  yan.css          → ALL styles & colors (edit this one file to restyle the whole site)
+  hero.js          → The box/puzzle interaction (no need to touch)
+  assets/          → Your logo + puzzle pieces. Put your images/videos here too.
+
+To preview: double-click index.html — it opens in your browser. Keep all files
+together in this folder so they can find each other.
+
+
+EASY EDITS
+----------
+• TEXT: open any .html in a text editor (VS Code is free & recommended).
+  Search for the words you see on the page and type over them.
+
+• COLORS: open yan.css, top section ":root". Change a hex code, save, refresh.
+      --paper  #f9fcff   background
+      --yellow #fff789   accent / puzzle
+      --blue   #5f9ef4   headings, lines
+      --soft   #b6d6ff   light panels
+      --text   #3f74c8   body text
+
+• EMAIL / SOCIAL: search "your@email.com" and the empty href="#" links next to
+  Behance / Instagram / LinkedIn. These appear on every page.
+
+• HERO TEXT: in index.html search "Click the box to open" or the name lines
+  (NGUYEN / Y AN / VU).
+
+
+ADDING A PROJECT
+----------------
+1. Copy project-1.html and rename it, e.g. project-3.html.
+2. Open it and edit: the title, the "Overview" text, the facts sidebar
+   (client/year/role/tools), and the media.
+3. Open work.html, copy one <a class="card"> ... </a> block, paste it, and set
+   its href="project-3.html" plus its title/teaser/badge.
+
+
+ADDING IMAGES
+-------------
+1. Drop your image into the assets/ folder (e.g. assets/p1-cover.jpg).
+2. In the page, find the placeholder, e.g.
+       <div class="proj-hero"><span class="ph">Add cover image or video</span></div>
+   and replace the <span...> with:
+       <img src="assets/p1-cover.jpg" alt="Short description">
+3. Gallery: each <figure><span class="ph">Image 1</span></figure> becomes
+       <figure><img src="assets/p1-1.jpg" alt=""></figure>
+
+
+ADDING VIDEOS
+-------------
+Find the block that says "Paste your video embed here" and replace the <span>
+with ONE of these:
+
+  YouTube:  <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+  Vimeo:    <iframe src="https://player.vimeo.com/video/VIDEO_ID" allowfullscreen></iframe>
+  File:     <video src="assets/my-video.mp4" controls></video>
+
+(VIDEO_ID is the code at the end of the share link.)
+
+Sky video on the home hero: in index.html, uncomment the <video class="sky-video">
+line near the top of the hero, set its src, and delete the <div class="sky"> block.
+
+
+PUTTING IT ONLINE (free options)
+--------------------------------
+• Netlify Drop  → app.netlify.com/drop  (drag this whole folder onto the page)
+• GitHub Pages  → upload the folder to a repo, enable Pages in settings
+• Cloudflare Pages, Vercel — all work the same way (drag/upload the folder)
+
+Your home page must be named index.html (it already is), so it loads first.

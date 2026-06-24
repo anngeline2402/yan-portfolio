@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nguyen Y An Vu — Creative Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600;1,9..144,900&family=Jost:wght@300;400;500;600&family=Prata&family=Boldonse&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="yan.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a class="nav-brand" href="index.html"
+        ><img src="assets/logo.png" alt="Y A N logo" /><span class="wm"></span
+      ></a>
+      <div class="nav-pill">
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <!-- Background video (streams from link; download into assets/ to make permanent). -->
+      <video
+        class="sky-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260424_064411_9e9d7f84-9277-41f4-ab10-59172d89e6be.mp4"
+      ></video>
+      <div class="sky" aria-hidden="true">
+        <div class="cloud c1"></div>
+        <div class="cloud c2"></div>
+        <div class="cloud c3"></div>
+        <div class="cloud c4"></div>
+        <div class="cloud c5"></div>
+      </div>
+
+      <svg class="globe" viewBox="0 0 120 120" aria-hidden="true">
+        <g class="ring" fill="none" stroke="#5f9ef4" stroke-width="1.4">
+          <defs>
+            <path
+              id="circlePath"
+              d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"
+            />
+          </defs>
+          <text
+            font-family="Jost, sans-serif"
+            font-size="11.5"
+            letter-spacing="2.5"
+            fill="#5f9ef4"
+            stroke="none"
+          >
+            <textPath href="#circlePath" startOffset="0">
+              WORK AROUND THE GLOBE · WORK AROUND THE GLOBE ·
+            </textPath>
+          </text>
+        </g>
+        <g fill="none" stroke="#5f9ef4" stroke-width="2">
+          <circle cx="60" cy="60" r="20" />
+          <ellipse cx="60" cy="60" rx="8" ry="20" />
+          <line x1="40" y1="60" x2="80" y2="60" />
+        </g>
+      </svg>
+
+      <div class="hero-content">
+        <div id="stage">
+          <img class="ghost" id="g1" src="assets/ghost1.png" alt="" />
+          <img class="ghost" id="g2" src="assets/ghost2.png" alt="" />
+          <img class="ghost" id="g3" src="assets/ghost3.png" alt="" />
+          <div class="box-base" id="boxBase"></div>
+          <div
+            class="piece"
+            id="piece1"
+            tabindex="0"
+            role="button"
+            aria-label="Puzzle piece 1 of 3"
+          >
+            <img src="assets/piece1.png" alt="" />
+          </div>
+          <div
+            class="piece"
+            id="piece2"
+            tabindex="0"
+            role="button"
+            aria-label="Puzzle piece 2 of 3"
+          >
+            <img src="assets/piece2.png" alt="" />
+          </div>
+          <div
+            class="piece"
+            id="piece3"
+            tabindex="0"
+            role="button"
+            aria-label="Puzzle piece 3 of 3"
+          >
+            <img src="assets/piece3.png" alt="" />
+          </div>
+          <div
+            class="box-lid"
+            id="boxLid"
+            tabindex="0"
+            role="button"
+            aria-label="Click to open the box"
+          ></div>
+        </div>
+
+        <div class="hint" id="hint">
+          <div class="big" id="hintBig">Click the box to open&nbsp;&#9788;</div>
+          <div class="small" id="hintSmall">a little surprise inside</div>
+          <div class="dots" id="dots" style="display: none">
+            <span class="dot" id="d1"></span><span class="dot" id="d2"></span
+            ><span class="dot" id="d3"></span>
+          </div>
+          <button class="skip" id="skip" style="display: none">
+            Can&rsquo;t drag? Tap to assemble
+          </button>
+        </div>
+
+        <div class="reveal" id="reveal">
+          <div class="namewrap">
+            <div class="nm"><span class="blue">NGUYEN</span></div>
+            <div class="nm">
+              <span class="yel">Y</span> <span class="yel">AN</span>
+            </div>
+            <div class="nm"><span class="blue">VU</span></div>
+          </div>
+          <div class="tag">
+            Creative Designer &middot; Content Strategist &middot; Canada
+          </div>
+          <a href="#featured" class="cue" aria-label="Scroll to work"
+            >&#8595;</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <div class="stripes"></div>
+
+    <!-- COLLAGE / PORTFOLIO (req 1) -->
+    <section class="collage featured" id="featured">
+      <div class="collage-head">
+        <div class="port reveal-up" data-reveal>PORTFOLIO</div>
+        <div class="port-sub reveal-up" data-reveal data-delay="60">
+          graphic designer
+        </div>
+        <p class="port-bio reveal-up" data-reveal data-delay="120">
+          Creative designer and content strategist helping brands tell stories
+          that stick. I combine graphic design, video editing, and digital
+          marketing to build visual identities that convert &mdash; from social
+          content to full campaigns.
+        </p>
+      </div>
+
+      <div class="collage-grid">
+        <a
+          class="col-card"
+          data-reveal
+          data-pop
+          data-delay="0"
+          href="project-1.html"
+        >
+          <img class="cv" src="assets/cover-xpan.jpg" alt="XPAN Magazine" />
+          <div class="cap">
+            <span class="ct">Magazine</span>
+            <h3>XPAN Magazine</h3>
+            <div class="more">View project &#8599;</div>
+          </div>
+        </a>
+        <a
+          class="col-card"
+          data-reveal
+          data-pop
+          data-delay="160"
+          href="project-2.html"
+        >
+          <img class="cv" src="assets/cover-mazonkiki.jpg" alt="Mazonkiki" />
+          <div class="cap">
+            <span class="ct">Logo Design</span>
+            <h3>Mazonkiki</h3>
+            <div class="more">View project &#8599;</div>
+          </div>
+        </a>
+        <a
+          class="col-card"
+          data-reveal
+          data-pop
+          data-delay="320"
+          href="project-3.html"
+        >
+          <img class="cv" src="assets/cover-snackaroo.jpg" alt="Snackaroo" />
+          <div class="cap">
+            <span class="ct">Brand Styleguide</span>
+            <h3>Snackaroo</h3>
+            <div class="more">View project &#8599;</div>
+          </div>
+        </a>
+        <a
+          class="col-card"
+          data-reveal
+          data-pop
+          data-delay="0"
+          href="project-4.html"
+        >
+          <img class="cv" src="assets/cover-haghouse.jpg" alt="Hag House" />
+          <div class="cap">
+            <span class="ct">Brand Guideline</span>
+            <h3>Hag House</h3>
+            <div class="more">View project &#8599;</div>
+          </div>
+        </a>
+        <a
+          class="col-card"
+          data-reveal
+          data-pop
+          data-delay="160"
+          href="project-5.html"
+        >
+          <img
+            class="cv"
+            src="assets/cover-moonspirit.jpg"
+            alt="Moonspirit Magazine"
+          />
+          <div class="cap">
+            <span class="ct">Magazine</span>
+            <h3>Moonspirit</h3>
+            <div class="more">View project &#8599;</div>
+          </div>
+        </a>
+        <a
+          class="col-card"
+          data-reveal
+          data-pop
+          data-delay="320"
+          href="project-6.html"
+        >
+          <img class="cv" src="assets/cover-snackgrad.jpg" alt="Snack Grad" />
+          <div class="cap">
+            <span class="ct">Brand Guideline</span>
+            <h3>Snack Grad</h3>
+            <div class="more">View project &#8599;</div>
+          </div>
+        </a>
+      </div>
+      <div class="seeall reveal-up" data-reveal data-delay="120">
+        <a class="btn solid" href="work.html">See all work &#8599;</a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="eyebrow">let&rsquo;s work together</div>
+      <h2>GET IN <span class="yel">TOUCH</span></h2>
+      <div class="clinks">
+        <a href="mailto:anpunch.1724@gmail.com" class="cbtn primary"
+          >&#9993; Email me</a
+        >
+        <a
+          href="https://www.behance.net/yanstudioyyc/projects"
+          target="_blank"
+          rel="noopener"
+          class="cbtn"
+          >Behance &#8599;</a
+        >
+        <a
+          href="https://www.linkedin.com/in/yanvu/"
+          target="_blank"
+          rel="noopener"
+          class="cbtn"
+          >LinkedIn &#8599;</a
+        >
+      </div>
+    </section>
+
+    <footer>
+      <a class="fl" href="index.html">YAN</a>
+      <p>&copy; 2026 Nguyen Y An Vu — All rights reserved</p>
+    </footer>
+
+    <button class="sound-toggle" aria-label="Mute music" title="Music on/off">
+      <svg
+        class="on"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M11 5 6 9H2v6h4l5 4z" />
+        <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+        <path d="M19 5a9 9 0 0 1 0 14" />
+      </svg>
+      <svg
+        class="off"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M11 5 6 9H2v6h4l5 4z" />
+        <line x1="22" y1="9" x2="16" y2="15" />
+        <line x1="16" y1="9" x2="22" y2="15" />
+      </svg>
+    </button>
+    <script src="smooth.js"></script>
+    <script src="sound.js"></script>
+    <script src="nav.js"></script>
+    <script src="hero.js"></script>
+    <script src="reveal.js"></script>
+  </body>
+</html>

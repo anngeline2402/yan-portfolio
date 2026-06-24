@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — Nguyen Y An Vu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600;1,9..144,900&family=Jost:wght@300;400;500;600&family=Prata&family=Boldonse&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="yan.css" />
+  </head>
+  <body>
+    <nav>
+      <a class="nav-brand" href="index.html"
+        ><img src="assets/logo.png" alt="Y A N logo" /><span class="wm"></span
+      ></a>
+      <div class="nav-pill">
+        <a href="work.html">Work</a>
+        <a href="about.html" class="active">About</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+
+    <header class="page-head">
+      <div class="eyebrow">hello, i&rsquo;m</div>
+      <h1 class="name-prata">Nguyen <span class="yel">Y An</span> Vu</h1>
+    </header>
+
+    <main class="wrap">
+      <!-- BIO + PORTRAIT -->
+      <div class="about-grid reveal-up" data-reveal>
+        <div>
+          <p class="lead">
+            Creative designer and content strategist helping brands tell stories
+            that stick.
+          </p>
+          <p>
+            I combine graphic design, video editing, and digital marketing to
+            build visual identities that convert — from social content to full
+            campaigns. Let&rsquo;s make something worth scrolling for.
+          </p>
+          <div class="chips">
+            <span class="chip"><span class="d"></span> Graphic Design</span>
+            <span class="chip"><span class="d"></span> Video Editing</span>
+            <span class="chip"><span class="d"></span> Digital Marketing</span>
+            <span class="chip"><span class="d"></span> Brand Identity</span>
+            <span class="chip"><span class="d"></span> Social Content</span>
+            <span class="chip"><span class="d"></span> Motion Graphics</span>
+          </div>
+        </div>
+
+        <div class="portrait">
+          <img src="assets/me.jpg" alt="Nguyen Y An Vu" />
+        </div>
+      </div>
+
+      <!-- ABOUT-ME MOTION GRAPHICS VIDEO -->
+      <div style="margin-top: 64px">
+        <div class="eyebrow">get to know me</div>
+        <div class="title" style="margin-bottom: 24px">In <em>motion</em></div>
+
+        <!-- Paste your video here.
+         YouTube: src="https://www.youtube.com/embed/VIDEO_ID"
+         Vimeo:   src="https://player.vimeo.com/video/VIDEO_ID"
+         Or a file: replace the <iframe> line with
+                    <video src="assets/about-me.mp4" controls poster="assets/about-cover.jpg"></video> -->
+        <div class="video-about reveal-up" data-reveal>
+          <video
+            src="assets/about-me.mp4"
+            controls
+            poster="assets/about-cover.jpg"
+            preload="metadata"
+          ></video>
+        </div>
+      </div>
+    </main>
+
+    <section id="contact">
+      <div class="eyebrow">let&rsquo;s work together</div>
+      <h2>GET IN <span class="yel">TOUCH</span></h2>
+      <div class="clinks">
+        <a href="mailto:anpunch.1724@gmail.com" class="cbtn primary"
+          >&#9993; Email me</a
+        >
+        <a
+          href="https://www.behance.net/yanstudioyyc/projects"
+          target="_blank"
+          rel="noopener"
+          class="cbtn"
+          >Behance &#8599;</a
+        >
+        <a
+          href="https://www.linkedin.com/in/yanvu/"
+          target="_blank"
+          rel="noopener"
+          class="cbtn"
+          >LinkedIn &#8599;</a
+        >
+      </div>
+    </section>
+
+    <footer>
+      <a class="fl" href="index.html">YAN</a>
+      <p>&copy; 2026 Nguyen Y An Vu — All rights reserved</p>
+    </footer>
+    <button class="sound-toggle" aria-label="Mute music" title="Music on/off">
+      <svg
+        class="on"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M11 5 6 9H2v6h4l5 4z" />
+        <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+        <path d="M19 5a9 9 0 0 1 0 14" />
+      </svg>
+      <svg
+        class="off"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M11 5 6 9H2v6h4l5 4z" />
+        <line x1="22" y1="9" x2="16" y2="15" />
+        <line x1="16" y1="9" x2="22" y2="15" />
+      </svg>
+    </button>
+    <script src="smooth.js"></script>
+    <script src="sound.js"></script>
+    <script src="nav.js"></script>
+    <script src="reveal.js"></script>
+  </body>
+</html>

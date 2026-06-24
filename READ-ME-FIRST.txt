@@ -1,0 +1,40 @@
+YAN PORTFOLIO — COMPLETE SITE (updated)
+=======================================
+
+This zip contains your WHOLE site: all the original files you sent, with the
+new edits already merged in, plus all the new media. The old project-7.html
+(Materialists) has already been removed for you.
+
+ONE THING TO KNOW
+-----------------
+Your existing images (logo, puzzle pieces, the sky video, and the covers /
+brand-book pages for your OTHER projects — XPAN, Mazonkiki, Snackaroo, Hag
+House, Moonspirit) were never uploaded to me, so they are NOT inside this zip.
+
+To get a fully working site, do one of these:
+  • EASIEST: copy the new files from this zip's assets/ folder into the assets/
+    folder of your current project, and copy the updated .html / .css / .js files
+    into your project (let them overwrite). Then delete your old project-7.html.
+  • OR: drop your existing assets/ images into this zip's assets/ folder.
+
+Either way, keep all files together in one folder. Open index.html to preview.
+
+WHAT'S NEW IN assets/
+---------------------
+  cover-snackgrad.jpg            Snack Grad project cover
+  snackgrad-wordmark.mp4         Snack Grad wordmark animation
+  me.jpg                         your About-page photo
+  snackgrad/p01.jpg … p34.jpg    Snack Grad brand-book pages
+  short/short-*.jpg              the 10 "Short works" carousel images
+
+WHAT CHANGED (summary)
+----------------------
+  • Home: name centres on mobile; PORTFOLIO heading centres on desktop;
+    YAN Studio card → Snack Grad; Materialists card + placeholder removed.
+  • Hero: a "boing" sound plays as each puzzle piece jumps out of the box.
+  • Work: removed the "The Work" text; puzzle pieces share a baseline (tune
+    --wp-ov / --wp3-y in yan.css if needed); the Materialists slot is now an
+    auto-scrolling "Short works" carousel that pauses + grows items on hover.
+  • About: your photo added; logo added to that page's nav.
+  • Project 6: rebuilt as the Snack Grad brand guideline (cover + wordmark
+    video + 34-page brand book).
