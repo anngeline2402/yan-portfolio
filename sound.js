@@ -81,10 +81,20 @@ window.YANSound = (function(){
     return muted;
   }
 
-  // start ambient on the very first interaction anywhere
-  function kick(){ ensure(); startMusic(); window.removeEventListener('pointerdown',kick); window.removeEventListener('keydown',kick); }
+  // start ambient on the very first interaction anywhere (click, key, scroll, or touch)
+  function kick(){
+    ensure(); startMusic();
+    window.removeEventListener('pointerdown',kick);
+    window.removeEventListener('keydown',kick);
+    window.removeEventListener('wheel',kick);
+    window.removeEventListener('touchmove',kick);
+    window.removeEventListener('scroll',kick);
+  }
   window.addEventListener('pointerdown', kick);
   window.addEventListener('keydown', kick);
+  window.addEventListener('wheel', kick, {passive:true});
+  window.addEventListener('touchmove', kick, {passive:true});
+  window.addEventListener('scroll', kick, {passive:true});
 
   return { ensure:ensure, pop:pop, snap:snap, solve:solve, jump:jump, startMusic:startMusic, toggleMute:toggleMute, isMuted:function(){return muted;} };
 })();

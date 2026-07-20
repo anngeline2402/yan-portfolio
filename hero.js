@@ -91,6 +91,8 @@
 
   lid.addEventListener('click',openBox);
   lid.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();openBox();} });
+  base.addEventListener('click',openBox);
+  base.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();openBox();} });
   CFG.forEach(function(p){
     p.node.addEventListener('mousedown',function(e){down(p,e);});
     p.node.addEventListener('touchstart',function(e){down(p,e);},{passive:false});

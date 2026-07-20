@@ -769,6 +769,11 @@ footer p {
     inset 0 16px 20px -10px rgba(95, 158, 244, 0.4),
     0 26px 44px rgba(95, 158, 244, 0.3);
   z-index: 6;
+  cursor: pointer;
+}
+.box-base:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 4px;
 }
 .box-base::before {
   content: "";
@@ -807,10 +812,21 @@ footer p {
   z-index: 5;
 }
 .ghost.show {
-  opacity: 0.55;
+  opacity: 0.9;
+  animation: ghostPulse 1.6s ease-in-out infinite;
 }
 .ghost.gone {
   opacity: 0;
+  animation: none;
+}
+@keyframes ghostPulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 5px rgba(255, 247, 137, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(255, 247, 137, 0.95));
+  }
 }
 .piece {
   position: absolute;
@@ -1572,6 +1588,33 @@ nav.solid .nav-pill {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: opacity 0.4s ease;
+}
+
+/* hover video preview on work-page cards */
+.thumb-vid {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.card.vid-ready:hover .thumb-vid {
+  opacity: 1;
+}
+.card.vid-ready:hover .thumb img.cover {
+  opacity: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .card.vid-ready:hover .thumb-vid {
+    opacity: 0;
+  }
+  .card.vid-ready:hover .thumb img.cover {
+    opacity: 1;
+  }
 }
 
 /* name legibility on video/sky (soft shadow, not a stroke) */
@@ -1636,12 +1679,12 @@ nav.solid .nav-pill {
 
 /* flip-book */
 .flipbook-wrap {
-  max-width: 920px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 .flipbook-wrap iframe {
   width: 100%;
-  height: 600px;
+  height: 760px;
   border: 2px solid var(--blue) !important;
   border-radius: 14px;
   box-shadow: 6px 8px 0 var(--soft);
@@ -1650,9 +1693,9 @@ nav.solid .nav-pill {
 
 /* scrollable document viewer */
 .doc-viewer {
-  max-width: 780px;
+  max-width: 960px;
   margin: 0 auto;
-  max-height: 84vh;
+  max-height: 92vh;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   border: 2px solid var(--blue);
