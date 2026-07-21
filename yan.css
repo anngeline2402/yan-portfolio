@@ -596,23 +596,29 @@ nav {
 
 /* ---------------- CONTACT + FOOTER ---------------- */
 #contact {
-  background: var(--blue);
+  background: linear-gradient(
+    180deg,
+    var(--sky-hi) 0%,
+    var(--sky-mid) 48%,
+    var(--sky-lo) 100%
+  );
   padding: 84px 40px;
   text-align: center;
 }
 #contact .eyebrow {
-  color: var(--yellow);
+  color: var(--text);
 }
 #contact h2 {
   font-family: "Fraunces", serif;
   font-weight: 900;
   font-size: clamp(46px, 8vw, 96px);
   line-height: 0.9;
-  color: var(--paper);
+  color: #3f74c8;
   margin-bottom: 28px;
 }
 #contact h2 .yel {
-  color: var(--yellow);
+  color: #ffff9e;
+
 }
 .clinks {
   display: flex;
@@ -625,14 +631,15 @@ nav {
   align-items: center;
   gap: 8px;
   padding: 14px 27px;
-  border: 2px solid var(--paper);
+  border: 2px solid var(--blue);
   border-radius: 100px;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--paper);
+  color: var(--blue);
+  background: #fff;
   transition: 0.2s;
 }
 .cbtn.primary {
@@ -641,14 +648,19 @@ nav {
   color: var(--blue);
 }
 .cbtn:hover {
-  background: var(--soft);
-  border-color: var(--soft);
+  background: var(--yellow);
+  border-color: var(--yellow);
   color: var(--blue);
 }
 
 footer {
-  background: var(--blue);
-  border-top: 1.5px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(
+    180deg,
+    var(--sky-hi) 0%,
+    var(--sky-mid) 0%,
+    var(--sky-lo) 0%
+  );
+  border-top: 1.5px solid rgba(95, 158, 244, 0.25);
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
@@ -661,13 +673,14 @@ footer .fl {
   font-weight: 900;
   font-size: 18px;
   letter-spacing: 0.14em;
-  color: var(--paper);
-  opacity: 0.7;
+  color: white;
+  opacity: 0.75;
   text-decoration: none;
 }
 footer p {
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.6);
+  color: white;
+  opacity: 0.75;
   letter-spacing: 0.04em;
 }
 
@@ -693,6 +706,9 @@ footer p {
   }
   footer {
     padding: 18px 20px;
+  }
+  .sound-toggle {
+    bottom: 84px;
   }
 }
 
@@ -1360,7 +1376,7 @@ nav.solid .nav-pill {
 .sound-toggle {
   position: fixed;
   left: 18px;
-  bottom: 18px;
+  bottom: 96px;
   z-index: 450;
   width: 48px;
   height: 48px;
