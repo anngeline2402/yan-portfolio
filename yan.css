@@ -487,6 +487,64 @@ nav {
   background: var(--yellow);
   border: 1.5px solid var(--blue);
 }
+/* education & awards card (About page) */
+.edu-grid {
+  margin-top: 8px;
+}
+
+/* software icon grid (About page) */
+.software-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  gap: 14px;
+  margin-top: 8px;
+}
+.soft-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 8px;
+  background: #fff;
+  border: 2px solid var(--blue);
+  border-radius: 14px;
+  box-shadow: 3px 4px 0 var(--soft);
+  transition:
+    transform 0.25s cubic-bezier(0.34, 1.5, 0.5, 1),
+    box-shadow 0.25s;
+}
+.soft-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 5px 7px 0 var(--soft);
+}
+.soft-tile img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  display: block;
+}
+.soft-tile span {
+  font-family: "Jost", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--blue);
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+.soft-tile .mono-ic {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--tile-color, var(--blue));
+  color: #fff;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+}
+
 .video-about {
   margin-top: 18px;
   border: 2px solid var(--blue);
@@ -1900,6 +1958,9 @@ nav.solid .nav-pill {
   border-radius: 100px;
   border: 1.5px solid var(--blue);
 }
+.marquee-dup {
+  display: contents;
+}
 
 /* reduced motion: stop the auto-scroll, let people swipe/scroll instead */
 @media (prefers-reduced-motion: reduce) {
@@ -1917,5 +1978,21 @@ nav.solid .nav-pill {
   }
   .shorts-head {
     padding: 0 20px;
+  }
+  .marquee {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+  }
+  .marquee-track {
+    animation: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .shot {
+    scroll-snap-align: start;
+  }
+  .marquee-dup {
+    display: none;
   }
 }
