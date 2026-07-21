@@ -1666,11 +1666,20 @@ nav.solid .nav-pill {
 .card.vid-ready:hover .thumb img.cover {
   opacity: 0;
 }
+/* mobile/touch: no real hover, so JS adds this class after a 3s dwell */
+.card.vid-ready.touch-playing .thumb-vid {
+  opacity: 1;
+}
+.card.vid-ready.touch-playing .thumb img.cover {
+  opacity: 0;
+}
 @media (prefers-reduced-motion: reduce) {
-  .card.vid-ready:hover .thumb-vid {
+  .card.vid-ready:hover .thumb-vid,
+  .card.vid-ready.touch-playing .thumb-vid {
     opacity: 0;
   }
-  .card.vid-ready:hover .thumb img.cover {
+  .card.vid-ready:hover .thumb img.cover,
+  .card.vid-ready.touch-playing .thumb img.cover {
     opacity: 1;
   }
 }
