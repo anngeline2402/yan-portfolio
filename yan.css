@@ -617,7 +617,7 @@ nav {
   margin-bottom: 28px;
 }
 #contact h2 .yel {
-  color: #ffff9e;
+  color: #ffe495;
 
 }
 .clinks {
@@ -643,8 +643,8 @@ nav {
   transition: 0.2s;
 }
 .cbtn.primary {
-  background: var(--yellow);
-  border-color: var(--yellow);
+  background: #ffe495;
+  border-color: #ffe495;
   color: var(--blue);
 }
 .cbtn:hover {
@@ -1358,8 +1358,8 @@ nav {
     box-shadow 0.45s ease;
 }
 nav.solid {
-  background: #ffe9a8 !important;
-  border-bottom: 2px solid var(--blue) !important;
+  background:#ffe495  !important;
+  border-bottom: #ffe495 !important;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   box-shadow: 0 4px 18px rgba(95, 158, 244, 0.18);
