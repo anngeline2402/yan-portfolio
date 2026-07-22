@@ -693,6 +693,12 @@ footer p {
     padding: 7px 16px;
   }
   .nav-brand {
+    gap: 0;
+  }
+  .nav-brand img {
+    height: 34px;
+  }
+  .nav-brand .wm {
     display: none;
   }
   .wrap {
