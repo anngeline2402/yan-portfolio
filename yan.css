@@ -1410,6 +1410,56 @@ nav.solid .nav-pill {
   padding: 78px 24px 70px;
   overflow: hidden;
 }
+
+/* falling puzzle pieces — decorative background layer, behind the cards */
+.puzzle-fall {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.pz-piece {
+  position: absolute;
+  top: -18%;
+  width: var(--pz-size, 60px);
+  height: auto;
+  opacity: 0;
+  will-change: transform, opacity;
+  animation-name: pzFall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+.puzzle-fall.is-active .pz-piece {
+  animation-play-state: running;
+}
+@keyframes pzFall {
+  0% {
+    top: -18%;
+    transform: translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateX(var(--pz-sway, 24px)) rotate(180deg);
+  }
+  92% {
+    opacity: 0.85;
+  }
+  100% {
+    top: 112%;
+    transform: translateX(0) rotate(360deg);
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .puzzle-fall {
+    display: none;
+  }
+}
 .collage-head {
   max-width: 1020px;
   margin: 0 auto 8px;
@@ -1444,6 +1494,7 @@ nav.solid .nav-pill {
 }
 .collage-grid {
   position: relative;
+  z-index: 2;
   max-width: 1020px;
   margin: 26px auto 0;
   display: flex;
