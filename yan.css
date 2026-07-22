@@ -2081,6 +2081,83 @@ nav.solid .nav-pill {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* poster lightbox — opens when a Short Works carousel item is clicked */
+.shot-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: rgba(26, 58, 107, 0.72);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0s linear 0.3s;
+}
+.shot-lightbox.open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+}
+.shot-lightbox-inner {
+  position: relative;
+  max-width: min(90vw, 720px);
+  max-height: 86vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0.92);
+  transition: transform 0.3s cubic-bezier(0.34, 1.4, 0.5, 1);
+}
+.shot-lightbox.open .shot-lightbox-inner {
+  transform: scale(1);
+}
+.shot-lightbox-img {
+  max-width: 100%;
+  max-height: 74vh;
+  width: auto;
+  height: auto;
+  display: block;
+  border: 3px solid var(--paper);
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(15, 30, 60, 0.45);
+}
+.shot-lightbox-cap {
+  margin-top: 14px;
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--paper);
+  text-align: center;
+}
+.shot-lightbox-close {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--blue);
+  background: var(--yellow);
+  color: var(--blue);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+}
+.shot-lightbox-close:hover {
+  transform: scale(1.1) rotate(-6deg);
+}
+
 .shot-tag {
   flex: 0 0 auto;
   background: var(--yellow);
