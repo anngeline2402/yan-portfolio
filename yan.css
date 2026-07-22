@@ -125,16 +125,59 @@ nav {
   color: var(--text);
 }
 
-/* striped divider */
-.stripes {
-  height: 26px;
-  background: repeating-linear-gradient(
-    90deg,
-    var(--yellow) 0 22px,
-    var(--paper) 22px 44px
-  );
+/* skills ticker (replaces the old static striped divider) */
+.skills-ticker {
+  display: block;
+  height: 46px;
+  overflow: hidden;
+  background: var(--yellow);
   border-top: 2px solid var(--blue);
   border-bottom: 2px solid var(--blue);
+  text-decoration: none;
+  cursor: pointer;
+}
+.skills-ticker-track {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  align-items: center;
+  animation: skillsScroll 22s linear infinite;
+}
+.skills-ticker:hover .skills-ticker-track {
+  animation-play-state: paused;
+}
+.skills-ticker-set {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.skills-ticker .sk {
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blue);
+  white-space: nowrap;
+  padding: 0 14px;
+}
+.skills-ticker .sk-sep {
+  color: var(--blue);
+  opacity: 0.6;
+  font-size: 11px;
+}
+@keyframes skillsScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .skills-ticker-track {
+    animation: none;
+  }
 }
 
 /* ---------------- sub-page header band ---------------- */
@@ -1033,6 +1076,17 @@ footer p {
 .reveal.show {
   opacity: 1;
   transform: translateY(0);
+  pointer-events: auto;
+}
+.reveal-link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.reveal-link:hover {
+  transform: translateY(-2px);
 }
 .reveal .nm {
   font-family: "Fraunces", serif;
