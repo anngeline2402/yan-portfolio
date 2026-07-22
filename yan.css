@@ -1358,7 +1358,7 @@ nav {
     box-shadow 0.45s ease;
 }
 nav.solid {
-  background: var(--yellow) !important;
+  background: #ffe9a8 !important;
   border-bottom: 2px solid var(--blue) !important;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
