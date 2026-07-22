@@ -275,18 +275,7 @@ nav {
   );
 }
 .badge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background: var(--yellow);
-  border: 1.5px solid var(--blue);
-  border-radius: 100px;
-  padding: 3px 12px;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--blue);
+  display: none;
 }
 .info {
   padding: 16px 18px;
