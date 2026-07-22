@@ -22,7 +22,7 @@
     img.alt = "";
     img.className = "pz-piece";
 
-    var size = rand(34, 76); // px
+    var size = rand(70, 170); // px
     var left = rand(-2, 96); // %
     var duration = rand(8, 16); // s
     var delay = -rand(0, duration); // negative = already mid-fall on load

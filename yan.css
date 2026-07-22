@@ -1411,11 +1411,12 @@ nav.solid .nav-pill {
   overflow: hidden;
 }
 
-/* falling puzzle pieces — decorative background layer, behind the cards */
+/* falling puzzle pieces — decorative layer, drifts in front of the cards
+   but is click-through (pointer-events: none) so it never blocks anything */
 .puzzle-fall {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 5;
   overflow: hidden;
   pointer-events: none;
 }
@@ -1441,13 +1442,13 @@ nav.solid .nav-pill {
     opacity: 0;
   }
   8% {
-    opacity: 0.85;
+    opacity: 0.7;
   }
   50% {
     transform: translateX(var(--pz-sway, 24px)) rotate(180deg);
   }
   92% {
-    opacity: 0.85;
+    opacity: 0.7;
   }
   100% {
     top: 112%;
