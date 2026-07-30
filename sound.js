@@ -85,12 +85,16 @@ window.YANSound = (function(){
   function kick(){
     ensure(); startMusic();
     window.removeEventListener('pointerdown',kick);
+    window.removeEventListener('touchstart',kick);
+    window.removeEventListener('touchend',kick);
     window.removeEventListener('keydown',kick);
     window.removeEventListener('wheel',kick);
     window.removeEventListener('touchmove',kick);
     window.removeEventListener('scroll',kick);
   }
   window.addEventListener('pointerdown', kick);
+  window.addEventListener('touchstart', kick, {passive:true});
+  window.addEventListener('touchend', kick, {passive:true});
   window.addEventListener('keydown', kick);
   window.addEventListener('wheel', kick, {passive:true});
   window.addEventListener('touchmove', kick, {passive:true});
